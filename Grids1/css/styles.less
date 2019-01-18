@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Montserrat:300,700');
+
+// Colors
+@100: #F5F5F5; // Gris clair
+@500: #9E9E9E; // Gris moyen
+@900: #212121; // Gris foncé
+
+// Breakpoints
+@tablet:	~'screen and (min-width: 48em)';
+@laptop:	~'screen and (min-width: 64em)';
+
+body {
+	margin: 0;
+	font-weight: 300;
+	font-family: 'Montserrat', cursive;
+}
+
+h2 {
+	color: @500;
+	text-align: center;
+	padding: 50px;
+}
+
+.padding {
+	padding: 1em;	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+header {
+	background-color: @900;
+	text-align: center;
+	
+	.logo {
+		color: @500;
+		font-size: 2em;
+		padding: 25px;
+		font-family: 'Bungee', cursive;
+	}
+}
+
+main {
+	padding: 0 25px 25px;
+
+	.groupe {
+		background-color: @100;
+		border-top: 1px solid @500;
+		border-bottom: 1px solid @500;
+        display: flex;
+        flex-wrap: wrap;        
+		
+		.bloc {
+            &.entier {
+                flex: 0 0 100%;
+            }
+            &.untiers {
+                flex: 0 0 33%;
+            }
+            @media @tablet {
+                &.tablette-moitie {
+                    flex: 0 0 50%;
+                }
+                &.tablette-untiers {
+                    flex: 0 0 33%;
+                }
+                &.tablette-un-quart {
+                    flex: 0 0 25%;
+                }
+                &.percent40 {
+                    flex: 0 0 40%;
+                }
+                &.percent60 {
+                    flex: 0 0 60%;
+                }
+            }
+            @media @laptop {
+                &.laptop-entier {
+                    flex: 0 0 100%;
+                }
+                &.laptop-moitie {
+                    flex: 0 0 50%;
+                }
+                &.laptop-un-quart {
+                    flex: 0 0 25%;
+                }
+                &.laptop-un-huitieme {
+                    flex: 0 0 12.5%;
+                }
+            }            
+
+		}
+        .moitie {
+            flex: 0 0 50%;
+            @media @tablet {
+                &.tablette-un-quart {
+                    flex: 0 0 25%;
+                }
+            }
+            @media @laptop {
+                &.laptop-entier {
+                    flex: 0 0 100%;
+                }
+                &.laptop-moitie {
+                    flex: 0 0 50%;
+                }
+                &.laptop-un-quart {
+                    flex: 0 0 25%;
+                }
+                &.laptop-un-huitieme {
+                    flex: 0 0 12.5%;
+                }
+            }
+        }
+	}
+    
+    }
+  
+
+footer {
+	background-color: @500;
+	text-align: center;
+	padding: 50px;
+}

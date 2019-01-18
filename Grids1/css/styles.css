@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Montserrat:300,700');
+body {
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Montserrat', cursive;
+}
+h2 {
+  color: #9e9e9e;
+  text-align: center;
+  padding: 50px;
+}
+.padding {
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  background-color: #212121;
+  text-align: center;
+}
+header .logo {
+  color: #9e9e9e;
+  font-size: 2em;
+  padding: 25px;
+  font-family: 'Bungee', cursive;
+}
+main {
+  padding: 0 25px 25px;
+}
+main .groupe {
+  background-color: #f5f5f5;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .groupe .bloc.entier {
+  flex: 0 0 100%;
+}
+main .groupe .bloc.untiers {
+  flex: 0 0 33%;
+}
+@media screen and (min-width: 48em) {
+  main .groupe .bloc.tablette-moitie {
+    flex: 0 0 50%;
+  }
+  main .groupe .bloc.tablette-untiers {
+    flex: 0 0 33%;
+  }
+  main .groupe .bloc.tablette-un-quart {
+    flex: 0 0 25%;
+  }
+  main .groupe .bloc.percent40 {
+    flex: 0 0 40%;
+  }
+  main .groupe .bloc.percent60 {
+    flex: 0 0 60%;
+  }
+}
+@media screen and (min-width: 64em) {
+  main .groupe .bloc.laptop-entier {
+    flex: 0 0 100%;
+  }
+  main .groupe .bloc.laptop-moitie {
+    flex: 0 0 50%;
+  }
+  main .groupe .bloc.laptop-un-quart {
+    flex: 0 0 25%;
+  }
+  main .groupe .bloc.laptop-un-huitieme {
+    flex: 0 0 12.5%;
+  }
+}
+main .groupe .moitie {
+  flex: 0 0 50%;
+}
+@media screen and (min-width: 48em) {
+  main .groupe .moitie.tablette-un-quart {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 64em) {
+  main .groupe .moitie.laptop-entier {
+    flex: 0 0 100%;
+  }
+  main .groupe .moitie.laptop-moitie {
+    flex: 0 0 50%;
+  }
+  main .groupe .moitie.laptop-un-quart {
+    flex: 0 0 25%;
+  }
+  main .groupe .moitie.laptop-un-huitieme {
+    flex: 0 0 12.5%;
+  }
+}
+footer {
+  background-color: #9e9e9e;
+  text-align: center;
+  padding: 50px;
+}
